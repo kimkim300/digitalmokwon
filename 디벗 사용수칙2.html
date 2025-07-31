@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>올바른 디벗 사용법</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Pretendard 또는 Noto Sans KR 폰트 적용 */
+        body {
+            font-family: 'Noto Sans KR', 'Pretendard', sans-serif;
+            background-color: #f0f9ff; /* sky-50 */
+            color: #1e3a8a; /* 군청색에 가까운 indigo-900 */
+        }
+        /* Tailwind CSS 커스텀 설정 */
+        .highlight-box {
+            background-color: #fff7ed; /* orange-50 */
+            border-left: 5px solid #f97316; /* orange-500 */
+            padding: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .highlight-box p {
+            color: #431407; /* orange-950 */
+            font-weight: 700;
+        }
+        /* 체크리스트 li 스타일 */
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        .checklist-item input[type="checkbox"] {
+            flex-shrink: 0;
+            margin-top: 6px;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 0.375rem;
+            border-color: #94a3b8; /* slate-400 */
+            color: #0d9488; /* teal-600 */
+            cursor: pointer;
+        }
+        .checklist-item label {
+            margin-left: 0.75rem;
+            color: #334155; /* slate-700 */
+            font-size: 1.125rem; /* text-lg */
+            line-height: 1.75rem;
+            cursor: pointer;
+        }
+        /* 아코디언(details) 커스텀 */
+        details > summary {
+            cursor: pointer;
+            list-style: none; /* 기본 화살표 제거 */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        details > summary::-webkit-details-marker {
+            display: none; /* Safari 기본 화살표 제거 */
+        }
+        details > summary::after {
+            content: '▼';
+            font-size: 1.2rem;
+            transition: transform 0.2s;
+        }
+        details[open] > summary::after {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-sky-50">
+
+    <nav class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-teal-600">💻 디벗 사용 설명서</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#section1" class="text-slate-700 hover:bg-teal-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">🚀 수업 활용</a>
+                        <a href="#section2" class="text-slate-700 hover:bg-teal-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">🛡️ 기기 관리</a>
+                        <a href="#section3" class="text-slate-700 hover:bg-teal-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">🔌 사용 후 정리</a>
+                        <a href="#section4" class="text-slate-700 hover:bg-teal-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">🤝 디지털 예절</a>
+                        <a href="#section5" class="text-slate-700 hover:bg-teal-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">💪 건강 습관</a>
+                        <a href="#signature" class="text-slate-700 hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">✍️ 약속하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto mt-12 mb-20 p-6 md:p-8">
+
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-teal-700">슬기로운 디벗 생활 ✨</h1>
+            <p class="mt-4 text-lg text-slate-600">우리들의 즐거운 배움을 위한 디벗 사용 규칙을 확인하고 체크해보세요!</p>
+        </header>
+
+        <section id="section1" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-4 border-teal-300">🚀 수업 중 디벗 활용</h2>
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+                <ul class="space-y-4">
+                    <li class="checklist-item"><input id="check1-1" type="checkbox"><label for="check1-1">선생님의 지도에 따라, 수업과 관련된 앱이나 사이트만 사용해요.</label></li>
+                    <li class="checklist-item"><input id="check1-2" type="checkbox"><label for="check1-2">수업 내용과 관련 없는 곳에 접속하지 않도록 주의해요.</label></li>
+                    <li class="checklist-item"><input id="check1-3" type="checkbox"><label for="check1-3">혼자 해결하기 어렵거나 궁금한 점이 생기면 바로 선생님께 질문해요.</label></li>
+                    <li class="checklist-item"><input id="check1-4" type="checkbox"><label for="check1-4">디벗으로 공부하며 문제를 해결하는 멋진 어린이가 되어보아요.</label></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="section2" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-4 border-teal-300">🛡️ 디벗 기기 관리</h2>
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+                <ul class="space-y-4">
+                    <li class="checklist-item"><input id="check2-1" type="checkbox"><label for="check2-1">디벗은 졸업할 때까지 함께할 친구예요. 내 물건처럼 소중히 다뤄주세요.</label></li>
+                    <li class="checklist-item"><input id="check2-2" type="checkbox"><label for="check2-2">디벗 본체, 펜, 충전기 등 부속품을 잃어버리지 않게 조심해요.</label></li>
+                    <li class="checklist-item"><input id="check2-3" type="checkbox"><label for="check2-3">디벗에 문제가 생기면 걱정하지 말고 바로 선생님께 알려주세요.</label></li>
+                </ul>
+                <div class="highlight-box"><p class="flex items-center"><span class="text-2xl mr-3">⚠️</span><span>디벗이 없어지거나 고장나면 수리 비용이 발생할 수 있으니, 항상 조심히 사용해야 해요!</span></p></div>
+            </div>
+        </section>
+
+        <section id="section3" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-4 border-teal-300">🔌 사용 후 정리</h2>
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+                <p class="text-center text-slate-600 mb-8 text-lg">수업이 끝나면 아래 순서에 따라 디벗을 정리해요!</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="flex flex-col items-center p-6 bg-sky-100 rounded-lg"><div class="text-5xl mb-4">1️⃣</div><div class="text-6xl mb-4">📥</div><h3 class="text-xl font-bold text-sky-800">충전함에 넣기</h3><p class="text-sky-700 mt-2">지정된 번호의 자리에 디벗을 넣어주세요.</p></div>
+                    <div class="flex flex-col items-center p-6 bg-sky-100 rounded-lg"><div class="text-5xl mb-4">2️⃣</div><div class="text-6xl mb-4">🔌</div><h3 class="text-xl font-bold text-sky-800">충전선 연결하기</h3><p class="text-sky-700 mt-2">충전선을 안전하게 잡고 디벗에 꼭 꽂아주세요.</p></div>
+                    <div class="flex flex-col items-center p-6 bg-sky-100 rounded-lg"><div class="text-5xl mb-4">3️⃣</div><div class="text-6xl mb-4">💡</div><h3 class="text-xl font-bold text-sky-800">충전 불 확인</h3><p class="text-sky-700 mt-2">충전기에 빨간 불이 들어오는지 꼭 확인해요.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section4" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-4 border-teal-300">🤝 디지털 예절</h2>
+            <div class="space-y-4">
+                <details class="bg-white p-6 rounded-xl shadow-lg"><summary class="text-xl font-bold text-slate-800">온라인 예절 지키기</summary><div class="mt-4 pt-4 border-t border-slate-200"><ul class="space-y-4"><li class="checklist-item"><input id="check4-1" type="checkbox"><label for="check4-1">얼굴이 보이지 않는다고 친구에게 함부로 말하지 않아요.</label></li><li class="checklist-item"><input id="check4-2" type="checkbox"><label for="check4-2">글을 쓰거나 말하기 전에는 항상 상대방을 존중하는 마음을 가져요.</label></li></ul></div></details>
+                <details class="bg-white p-6 rounded-xl shadow-lg"><summary class="text-xl font-bold text-slate-800">개인정보 보호하기</summary><div class="mt-4 pt-4 border-t border-slate-200"><ul class="space-y-4"><li class="checklist-item"><input id="check4-3" type="checkbox"><label for="check4-3">이름, 생일, 주소, 전화번호, 아이디, 비밀번호는 아주 소중해요.</label></li><li class="checklist-item"><input id="check4-4" type="checkbox"><label for="check4-4">다른 사람에게 나의 개인정보를 알려주거나, 친구의 개인정보를 함부로 올리지 않아요.</label></li></ul><div class="highlight-box mt-6"><p class="flex items-center"><span class="text-2xl mr-3">🔒</span><span>개인정보가 유출되면 위험한 일이 생길 수 있어요. 꼭꼭 지켜주세요!</span></p></div></div></details>
+                <details class="bg-white p-6 rounded-xl shadow-lg"><summary class="text-xl font-bold text-slate-800">지식재산권 존중하기</summary><div class="mt-4 pt-4 border-t border-slate-200"><ul class="space-y-4"><li class="checklist-item"><input id="check4-5" type="checkbox"><label for="check4-5">다른 사람이 만든 그림, 글, 영상 등 창작물을 마음대로 사용하지 않아요.</label></li><li class="checklist-item"><input id="check4-6" type="checkbox"><label for="check4-6">다른 사람의 노력과 시간을 존중하는 멋진 어린이가 되어요.</label></li></ul></div></details>
+            </div>
+        </section>
+
+        <section id="section5" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-4 border-teal-300">💪 건강 습관</h2>
+            <div class="bg-white p-8 rounded-xl shadow-lg"><div class="checklist-item"><input id="check5-1" type="checkbox"><label for="check5-1">디벗을 사용할 때는 허리를 펴고 바른 자세를 유지해요.</label></div><div class="checklist-item"><input id="check5-2" type="checkbox"><label for="check5-2">너무 오래 사용하지 않고, 중간중간 휴식 시간을 가져요.</label></div></div>
+        </section>
+
+        <section id="signature" class="scroll-mt-20">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-4 border-orange-300">✍️ 나의 다짐</h2>
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                <p class="text-slate-700 text-lg leading-relaxed mb-8">나는 위의 디벗 사용 수칙을 모두 꼼꼼히 읽고 이해했으며,<br>앞으로 올바른 디벗 사용을 통해 즐겁게 배우고 성장할 것을 약속합니다.</p>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <input type="text" id="signature-name" placeholder="이름을 입력하세요" class="border-b-2 border-slate-400 focus:border-teal-500 focus:ring-0 focus:outline-none p-2 text-xl w-full sm:w-64 text-center bg-transparent">
+                    <button id="signature-button" class="bg-teal-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-teal-700 transition duration-300 w-full sm:w-auto mt-4 sm:mt-0">약속하기!</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-teal-700 text-white text-center p-4 mt-16"><p>올바른 디벗 사용으로 즐겁고 유익한 배움의 시간을 만들어가요!</p></footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 서명 확인 팝업
+            const signatureButton = document.getElementById('signature-button');
+            const signatureNameInput = document.getElementById('signature-name');
+
+            if (signatureButton && signatureNameInput) {
+                signatureButton.addEventListener('click', function() {
+                    const name = signatureNameInput.value.trim();
+                    if (name === "") {
+                        alert("이름을 입력해주세요! 😊");
+                    } else {
+                        alert(`🎉 멋져요, ${name}님! 이제 당신은 디벗 전문가입니다! 🥳`);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
